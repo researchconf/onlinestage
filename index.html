@@ -21,8 +21,7 @@
 　　　　<script>
     function setIframeSrc(url){ 
       if(!url) url = 'https://miro.com/app/live-embed/uXjVMGu1VOw=/';
-      document.getElementById('miroframe').setAttribute('src', url);
-    　　　　// document.getElementById('miroframe').contentWindow.location.replace(url);
+    　　　　document.getElementById('miroframe').contentWindow.location.replace(url);
     }
     $.ajax({
       url: "__MiroURL.txt",
