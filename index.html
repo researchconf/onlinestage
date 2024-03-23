@@ -17,11 +17,12 @@
 </script>
 <!-- Google tag (gtag.js) ここまで -->
 <body style="height: 100%; margin:0;">
-  <iframe id="miroframe" style="display: block; width: 100%; height: 100%;" src="" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write"></iframe>
+  <iframe id="miroframe" style="display: block; width: 100%; height: 100%;" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write"></iframe>
 　　　　<script>
     function setIframeSrc(url){ 
       if(!url) url = 'https://miro.com/app/live-embed/uXjVMGu1VOw=/';
-    　　　　document.getElementById('miroframe').contentWindow.location.replace(url);
+      document.getElementById('miroframe').setAttribute('src', url);
+    　　　　// document.getElementById('miroframe').contentWindow.location.replace(url);
     }
     $.ajax({
       url: "__MiroURL.txt",
