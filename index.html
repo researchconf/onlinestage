@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>online stage</title>
+    <script src="jquery.js"></script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGZN1LZHJM"></script>
@@ -15,6 +16,19 @@
 </script>
 <body style="height: 100%; margin:0;">
 <!--<p style="font-size: 50px;text-align: center;">miroでGA使えるかのテスト</p>-->
-<iframe style="display: block; width: 100%; height: 100%;" src="https://miro.com/app/live-embed/uXjVMGu1VOw=/?autoplay=yep" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
+<iframe style="display: block; width: 100%; height: 100%;" src="https://miro.com/app/live-embed/uXjVMGu1VOw=/" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write"></iframe>
+<script>
+  $.ajax({
+    url: "mirourl.txt",
+    dataType: "text",
+    cache: false,
+    success: function(data, textStatus){
+      console.log('ajax success');
+    },
+    error: function(xhr, textStatus, errorThrown){
+      console.log('ajax error');
+    }
+  });
+</script>
 </body>
 </html>
