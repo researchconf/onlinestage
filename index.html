@@ -23,12 +23,30 @@
     <!--<iframe id="miroframe" style="display: block; width: 100%; height: 100%;" src="" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>-->
   </div>  
   <script>
+    function textToHTML(src){
+      // HTML文字列
+      const htmlString = '<iframe src="'+src+'"></iframe>';
+
+      // DOMParserを使ってDOMに変換
+      const parser = new DOMParser();
+      const dom = parser.parseFromString(htmlString, "text/html");
+
+      console.log(dom.documentElement);
+
+      return htmlString;
+    }
+    function iframeAdd(src){
+      var iframeText = '<iframe src="' + src + '">';
+      $('#miroframewrapper').append(iframeText);
+    }
     fetch("__MiroURL.txt")
       .then((response) => response.text())
       // .then((data) => document.querySelector("#miroframewrapper").innerHTML = '<iframe id="miroframe" style="display: block; width: 100%; height: 100%;" src="' + data + '" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>')
       // .then((data) => document.querySelector("#miroframewrapper").innerHTML = "<iframe id='miroframe' style='display: block; width: 100%; height: 100%;' src='" + data + "' frameborder='0' scrolling='no' allow='fullscreen; clipboard-read; clipboard-write' allowfullscreen></iframe>")
       // .then((data) => document.querySelector("#miroframewrapper").innerHTML = data.toString());
-      .then((data) => $('<iframe src="'+data+'">').appendTo('#miroframewrapper'));
+      // .then((data) => $('<iframe src="'+data+'">').appendTo('#miroframewrapper'));
+      // .then((data) => document.querySelector("#miroframewrapper").innerHTML = textToHTML(data));
+      .then((data) => iframeAdd(data));
     /*function setIframeSrc(url){ 
       if(!url) url = 'https://miro.com/app/live-embed/uXjVMGu1VOw=/';
       var iframeDom ='<iframe id="miroframe" style="display: block; width: 100%; height: 100%;" src="' + url + '" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen  is="x-frame-bypass"></iframe>';
