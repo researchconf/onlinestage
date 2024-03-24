@@ -20,17 +20,17 @@
 <!-- Google tag (gtag.js) ここまで -->
 <body style="height: 100%; margin:0;">
   <div id="miroframewrapper" style="width: 100%; height: 100%;">
-    <iframe id="miroframe" style="display: block; width: 100%; height: 100%;" src="" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
+    <!--<iframe id="miroframe" style="display: block; width: 100%; height: 100%;" src="" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>-->
   </div>  
   <script>
     fetch("__MiroURL.txt")
       .then((response) => response.text())
-      .then((data) => document.querySelector("#miroframe").setAttribute('src',data));
-    function setIframeSrc(url){ 
+      .then((data) => document.querySelector("#miroframewrapper").innerHTML = '<iframe id="miroframe" style="display: block; width: 100%; height: 100%;" src="' + data + '" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>');
+    /*function setIframeSrc(url){ 
       if(!url) url = 'https://miro.com/app/live-embed/uXjVMGu1VOw=/';
       var iframeDom ='<iframe id="miroframe" style="display: block; width: 100%; height: 100%;" src="' + url + '" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen  is="x-frame-bypass"></iframe>';
-      // document.getElementById('miroframewrapper').innerHTML = iframeDom;
-      // document.getElementById('miroframe').contentDocument.location.replace(url);
+      document.getElementById('miroframewrapper').innerHTML = iframeDom;
+      document.getElementById('miroframe').contentDocument.location.replace(url);
     }
     $.ajax({
       url: "__MiroURL.txt",
@@ -42,7 +42,7 @@
       error: function(xhr, textStatus, errorThrown){
         console.log('ajax error');
       }
-    });
+    });*/
   </script>
 </body>
 </html>
