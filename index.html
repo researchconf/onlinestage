@@ -25,11 +25,7 @@
     fetch("__miroframe.html")
       .then((response) => response.text())
       .then((data) => document.querySelector("#miroframewrapper").innerHTML = data)
-      .then(() => $("#miroframewrapper").attr({
-        frameborder: 0,
-        scrolling: 'no',
-        allow: 'fullscreen; clipboard-read; clipboard-write',
-        allowfullscreen: 'allowfullscreen'
+      .then(() => $("#miroframewrapper").attr({frameborder: 0,　scrolling: 'no',　allow: 'fullscreen; clipboard-read; clipboard-write',　allowfullscreen: 'allowfullscreen'
       }));
   </script>
 </body>
