@@ -41,9 +41,10 @@ body.is-mobile #guidanceForMobile {
     width: 80vw;
     padding: 48px;
     box-sizing: border-box;
-    border-radius: 16px;
+    border-radius: 24px;
     text-align: center;
-    font-size: 24px;
+    font-size: 32px;
+    font-family: sans-serif;
 
     & p {
       margin-bottom: 56px;
@@ -51,17 +52,25 @@ body.is-mobile #guidanceForMobile {
 
     & a {
       background-color: #2045A5;
-      border-radius: 8px;
-      display: block;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: #fff;
       padding: 24px;
       margin: 32px auto;
       text-decoration: none;
       width: 80%;
       font-size: 1.2em;
+      min-height: 164px;
+      box-sizing: border-box;
   
       &:hover {
         filter: saturate(0.70);
+      }
+
+      > span {
+        display: block;
       }
     }
   }
