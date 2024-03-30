@@ -19,11 +19,9 @@ body.is-mobile #guidanceForMobile {
   height: 100vh;
   left: 0;
   top: 0;
-  background-image: url(img/miro_capture.png);
-  background-size: cover;
-  background-position: center;
+  background-color: #DCF1FD;
 
-  &::after {
+  /* &::after {
     content: '';
     position: absolute;
     width: 100vw;
@@ -32,10 +30,10 @@ body.is-mobile #guidanceForMobile {
     top: 0;
     background-color: rgba(0,0,0,0.3);
     backdrop-filter: blur(16px);
-  }
+  } */
 
   > div {
-    background: #DCF1FD;
+    background: #fff;
     border: 2px solid #2045A5;
     z-index: 1;
     width: 80vw;
@@ -47,12 +45,14 @@ body.is-mobile #guidanceForMobile {
     font-family: sans-serif;
 
     & p {
-      margin-bottom: 56px;
+      margin-bottom: 64px;
+      color: #2045A5;
+      line-height: 1.5;
     }
 
     & a {
       background-color: #2045A5;
-      border-radius: 12px;
+      border-radius: 82px;
       display: flex;
       align-items: center;
       justify-content: center;
