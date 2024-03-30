@@ -5,6 +5,7 @@
     <title>Research Conference Online Stage</title>
     <link rel="stylesheet" type="text/css" href="style.css" /> 
     <script src="jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ua-parser-js@0/dist/ua-parser.min.js"></script>
     <script src="script.js"></script>
 </head>
 
@@ -25,8 +26,8 @@
     fetch("__miroframe.html")
       .then((response) => response.text())
       .then((data) => document.querySelector("#miroframewrapper").innerHTML = data)
-      .then(() => $("#miroframewrapper").attr({frameborder: 0,　scrolling: 'no',　allow: 'fullscreen; clipboard-read; clipboard-write',　allowfullscreen: 'allowfullscreen'
-      }));
+      .then(() => $("#miroframewrapper").attr({frameborder: 0,　scrolling: 'no',　allow: 'fullscreen; clipboard-read; clipboard-write',　allowfullscreen: 'allowfullscreen'}))
+      .then(() => setOnlineStage());// 最後にブラウザ判定系のスクリプト実行
   </script>
 </body>
 </html>
