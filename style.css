@@ -1,9 +1,68 @@
-html, body, #miroframewrapper {
+html, body, #miroFrameWrapper {
   height: 100%;
 }
-#miroframewrapper iframe {
+#miroFrameWrapper iframe {
   display: block; 
   width: 100%; 
   height: 100%;
   border: none;
+}
+#guidanceForMobile {
+  display: none;
+}
+body.is-mobile #guidanceForMobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-image: url(img/miro_capture.png);
+  background-size: cover;
+  background-position: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: blur(16px);
+  }
+
+  > div {
+    background: #DCF1FD;
+    border: 2px solid #2045A5;
+    z-index: 1;
+    width: 80vw;
+    padding: 48px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    text-align: center;
+    font-size: 24px;
+
+    & p {
+      margin-bottom: 56px;
+    }
+
+    & a {
+      background-color: #2045A5;
+      border-radius: 8px;
+      display: block;
+      color: #fff;
+      padding: 24px;
+      margin: 32px auto;
+      text-decoration: none;
+      width: 80%;
+      font-size: 1.2em;
+  
+      &:hover {
+        filter: saturate(0.70);
+      }
+    }
+  }
 }
