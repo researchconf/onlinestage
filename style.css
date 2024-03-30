@@ -60,10 +60,12 @@ body.is-mobile #guidanceForMobile {
       padding: 24px;
       margin: 32px auto;
       text-decoration: none;
-      width: 80%;
+      width: 90%;
       font-size: 1.2em;
       min-height: 164px;
       box-sizing: border-box;
+      font-weight: bold;
+      line-height: 1.4;
   
       &:hover {
         filter: saturate(0.70);
