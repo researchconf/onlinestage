@@ -45,7 +45,7 @@ body.is-mobile #guidanceForMobile {
     font-family: sans-serif;
 
     & p {
-      margin-bottom: 64px;
+      margin-bottom: 80px;
       color: #2045A5;
       line-height: 1.5;
     }
