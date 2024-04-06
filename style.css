@@ -19,7 +19,9 @@ body.is-mobile #guidanceForMobile {
   height: 100vh;
   left: 0;
   top: 0;
-  background-color: #DCF1FD;
+  background-image:url(img/bg.webp);
+  background-position: left top;
+  background-size: 40px;
 
   /* &::after {
     content: '';
@@ -33,16 +35,15 @@ body.is-mobile #guidanceForMobile {
   } */
 
   > div {
-    background: #fff;
-    border: 2px solid #2045A5;
     z-index: 1;
-    width: 80vw;
+    width: 86vw;
     padding: 48px;
     box-sizing: border-box;
     border-radius: 24px;
     text-align: center;
-    font-size: 32px;
-    font-family: sans-serif;
+    font-size: 48px;
+    font-weight: 700;;
+    font-family: Lato;
 
     & p {
       margin-bottom: 80px;
@@ -52,7 +53,7 @@ body.is-mobile #guidanceForMobile {
 
     & a {
       background-color: #2045A5;
-      border-radius: 82px;
+      border-radius: 91px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -61,10 +62,10 @@ body.is-mobile #guidanceForMobile {
       margin: 32px auto;
       text-decoration: none;
       width: 90%;
-      font-size: 1.2em;
-      min-height: 164px;
+      font-size: 0.9em;
+      height: 182px;
       box-sizing: border-box;
-      font-weight: bold;
+      font-weight: 600;
       line-height: 1.4;
   
       &:hover {
