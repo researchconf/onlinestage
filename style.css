@@ -42,8 +42,8 @@ body.is-mobile #guidanceForMobile {
     border-radius: 24px;
     text-align: center;
     font-size: 48px;
-    font-weight: 700;;
-    font-family: Lato;
+    font-weight: 600;;
+    font-family: 'Noto Sans JP';
 
     & p {
       margin-bottom: 80px;
@@ -65,8 +65,9 @@ body.is-mobile #guidanceForMobile {
       font-size: 0.9em;
       height: 182px;
       box-sizing: border-box;
-      font-weight: 600;
+      font-weight: 500;
       line-height: 1.4;
+      letter-spacing: 2px;
   
       &:hover {
         filter: saturate(0.70);
