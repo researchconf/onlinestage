@@ -21,7 +21,7 @@ body.is-mobile #guidanceForMobile {
   top: 0;
   background-image:url(img/bg.webp);
   background-position: left top;
-  background-size: 40px;
+  background-size: 60px;
 
   /* &::after {
     content: '';
