@@ -48,6 +48,7 @@ body.is-mobile #guidanceForMobile {
 
     & p {
       margin-bottom: 80px;
+      margin-top: 0;
       color: #2045A5;
       line-height: 1.5;
     }
