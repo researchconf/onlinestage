@@ -16,12 +16,13 @@ body.is-mobile #guidanceForMobile {
   justify-content: center;
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   left: 0;
   top: 0;
   background-image:url(img/bg.webp);
   background-position: left top;
   background-size: 60px;
+  border-top: #ddd;
 
   /* &::after {
     content: '';
