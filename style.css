@@ -47,10 +47,17 @@ body.is-mobile #guidanceForMobile {
     font-family: 'Noto Sans JP';
 
     & p {
-      margin-bottom: 80px;
+      margin-bottom: 40px;
       margin-top: 0;
       color: #2045A5;
       line-height: 1.5;
+
+      &.annot {
+        font-size: 0.8em;
+        opacity: 0.8;
+        line-height: 1em;
+        margin-bottom: 120px;
+      }
     }
 
     & a {
