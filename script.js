@@ -12,9 +12,9 @@ function setOnlineStage(){
     $('#miroFrameWrapper iframe').remove();
   } else {
     // Mac Safariだとiframeでクロスドメインエラー出るのでリダイレクト
+    // iframe使用で何か不都合ある場合は、ここのif分岐を取り払って、無条件にリダイレクトさせればOK
     if(result.browser.name === 'Safari') {
       window.location.href = $('#miroFrameWrapper iframe').attr('src');
     }
   }
 }
-// memo: miroにもslido埋め込んじゃおうかどうしようか
