@@ -52,6 +52,7 @@ if (params.has('mobiletest')) {
 
 function setOnlineStage(){
   if (params.has('poster_qr')) return;
+  
   if(result.device.type === 'mobile') {
 
     // iPhoneまたはAndroidならモーダル出す
