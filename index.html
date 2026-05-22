@@ -37,7 +37,7 @@
     fetch("__miroframe.html")
       .then((response) => response.text())
       .then((data) => document.querySelector("#miroFrameWrapper").innerHTML = data)
-      .then(() => $("#miroFrameWrapper").attr({frameborder: 0,　scrolling: 'no',　allow: 'fullscreen; clipboard-read; clipboard-write',　allowfullscreen: 'allowfullscreen'}))
+      .then(() => $("#miroFrameWrapper").attr({frameborder: 0, scrolling: 'no', allow: 'fullscreen; clipboard-read; clipboard-write', allowfullscreen: 'allowfullscreen'}))
       .then(() => $("#linkToMiro").attr('href', $('#miroFrameWrapper iframe').attr('src')))
       .then(() => setOnlineStage());// 最後にブラウザ判定系のスクリプト実行
   </script>
