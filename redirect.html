@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>Redirecting...</title>
+  <!-- Google tag (gtag.js) ここから -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6NEGRHNZL2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6NEGRHNZL2');
+  </script>
+  <!-- Google tag (gtag.js) ここまで -->
+  <script>
+    (function () {
+      var dest = new URLSearchParams(window.location.search).get('url');
+
+      if (!dest) return;
+
+      var redirected = false;
+
+      function doRedirect() {
+        if (redirected) return;
+        redirected = true;
+        window.location.href = dest;
+      }
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'link_redirect', {
+          event_category: 'redirect',
+          event_label: dest,
+          event_callback: doRedirect
+        });
+        setTimeout(doRedirect, 1000);
+      } else {
+        setTimeout(doRedirect, 300);
+      }
+    })();
+  </script>
+</head>
+<body></body>
+</html>
