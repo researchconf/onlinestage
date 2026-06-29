@@ -66,13 +66,19 @@ function setOnlineStage(){
     // Mac Safariだとiframeでクロスドメインエラー出るのでリダイレクト
     if(result.browser.name === 'Safari') {
 
-      const iframeSrc = $('#miroFrameWrapper iframe').attr('src');
+      const directURL = miroEmbedToBoard($('#miroFrameWrapper iframe').attr('src'));
 
       redirectWithGA(
-        iframeSrc,
+        directURL,
         'safari_iframe_redirect',
         'safari'
       );
     }
   }
+}
+//Embed用URLを普通のリンクURLに変換
+function miroEmbedToBoard(embedUrl) {
+  if (!embedUrl || !embedUrl.includes('live-embed')) return embedUrl;
+  const boardId = new URL(embedUrl).pathname.split('/').filter(Boolean).pop();
+  return `https://miro.com/app/board/${boardId}/`;
 }
